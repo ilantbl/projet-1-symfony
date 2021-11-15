@@ -43,16 +43,17 @@ class BlogController extends AbstractController
      */
     public function create(Request $request, ObjectManager $manager) {
 
+        if($request->request->count() > 0); {
         $article = new Article();
-        $form = $this->createFormBuilder($article)
-                     ->add('title')
-                     ->add('content')
-                     ->add('content')
-                     ->getForm();
+        $article -> setTitle($request->request->get('title'))
+                 -> setContent($request->request->get('content'))
+                 -> setImage($request->request->get('image'))
+                 -> setCreatedAt(new \dateTime());
 
-        return $this-> render('blog/create.html.twig', [
-            'formArticle' => $form->createView()
-        ]);
+    $manager ->persist($article);
+    $manager ->flush();
+}
+    return $this->render('blog/create.html.twig');
     }
 
     /**
