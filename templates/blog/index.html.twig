@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello BlogController!{% endblock %}
+
+{% block body %}
+
+<section class="articles">
+<article>
+    <h2>Titre de l'article</h2>
+    <div class="metadata">Ecrit le 10/05/2021 à 19h00 dans la catégorie Politique</div>
+    <div class="content">
+        <img src="http://placehold.it/350x150" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, minus dolorum porro ullam voluptatum quam?</p>
+        <p>Distinctio ipsa, dicta sunt aliquid laudantium error sapiente eveniet, culpa explicabo similique, aut maxime quibusdam!</p>
+        <a href="{{ path('blog_show') }}" class="btn btn-primary">Lire la suite</a>
+    </div>
+</article>
+<article>
+    <h2>Titre de l'article</h2>
+    <div class="metadata">Ecrit le 10/05/2021 à 19h00 dans la catégorie Politique</div>
+    <div class="content">
+        <img src="http://placehold.it/350x150" alt="">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus doloremque molestiae natus veniam illo aliquid.</p>
+        <p>Sint, molestias id vero praesentium eligendi quidem, impedit rem architecto doloremque quas nostrum excepturi accusantium?</p>
+        <a href="{{ path('blog_show') }}" class="btn btn-primary">Lire la suite</a>
+    </div>
+</article>
+<article>
+    <h2>Titre de l'article</h2>
+    <div class="metadata">Ecrit le 10/05/2021 à 19h00 dans la catégorie Politique</div>
+    <div class="content">
+        <img src="http://placehold.it/350x150" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quod obcaecati eum a earum unde.</p>
+        <p>Impedit laboriosam illo doloremque corrupti sed non facilis iste? Voluptates, adipisci. Atque in ipsam tempora.</p>
+        <a href="{{ path('blog_show') }}" class="btn btn-primary">Lire la suite</a>
+    </div>
+</article>
+</section>
+
+{% endblock %}
